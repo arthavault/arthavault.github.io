@@ -1,0 +1,21 @@
+name: unpack
+on:
+  push:
+    paths: ['downloads/ARTHAVAULT-website.zip']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          unzip -o downloads/ARTHAVAULT-website.zip -d _x
+          cp -r _x/site/. .
+          rm -rf _x downloads/ARTHAVAULT-website.zip README.txt
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Unpack website" || exit 0
+          git push
