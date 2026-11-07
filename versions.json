@@ -1,0 +1,66 @@
+[
+ {
+  "v": "2.1.1",
+  "file": "downloads/ARTHAVAULT-v2.1.1.apk",
+  "size": 238425,
+  "sha": "4afe1f22962ac98dbba566036e3e2e4d267c3fd478bc54136845ec2f2f6e54eb",
+  "notes": "New signing key (cert name ARTHAVAULT). Same features as 2.1.0. Cannot be installed over older versions: make a backup, uninstall the old app, install this one, then restore.",
+  "key": "new"
+ },
+ {
+  "v": "2.1.0",
+  "file": "downloads/ARTHAVAULT-v2.1.0.apk",
+  "size": 234329,
+  "sha": "998c0bcbaf1c821413fddb51c3da45b7ddb4b32701e9eea93d32dc00e384fdf8",
+  "notes": "New logo and a built-in Calculator button beside the + button.",
+  "key": "old"
+ },
+ {
+  "v": "2.0.0",
+  "file": "downloads/ARTHAVAULT-v2.0.0.apk",
+  "size": 226137,
+  "sha": "9b87e84f0bb1edbdf4cfc8590d8b9e7939989e46fad91c24298764f9d953fadc",
+  "notes": "Renamed to ARTHAVAULT, premium navy-and-gold design (dark by default, light available). Daily reminders removed.",
+  "key": "old"
+ },
+ {
+  "v": "1.0.4",
+  "file": "downloads/Mero-Sampatti-v1.0.4.apk",
+  "size": 189343,
+  "sha": "698f64ca98587e05b1f7c1ad937d8cc02a54466120e572b8199a146c0ac89ec4",
+  "notes": "Mero Sampatti. App tour with narration and daily reminder notifications.",
+  "key": "old"
+ },
+ {
+  "v": "1.0.3",
+  "file": "downloads/Mero-Sampatti-v1.0.3.apk",
+  "size": 176985,
+  "sha": "df55adc61e8d57aea6e04bd190d7065ce0ff5912efe65c6bb944ff19f660ac62",
+  "notes": "Mero Sampatti. Earlier release.",
+  "key": "old"
+ },
+ {
+  "v": "1.0.2",
+  "file": "downloads/Mero-Sampatti-v1.0.2.apk",
+  "size": 275289,
+  "sha": "d068734263ebbd07f9a8140131b9fc6e2294a28bb800e3822e5ce70fc8d996d5",
+  "notes": "Mero Sampatti. Earlier release.",
+  "key": "old"
+ },
+ {
+  "v": "1.0.1",
+  "file": "downloads/Mero-Sampatti-v1.0.1.apk",
+  "size": 275289,
+  "sha": "b3930cb8291571c65b5bfa3d0bdc528d0f51e256dd0289db9e61aa0ef04219d2",
+  "notes": "Mero Sampatti. Earlier release.",
+  "key": "old"
+ },
+ {
+  "v": "1.0",
+  "file": "downloads/Mero-Sampatti-v1.0.apk",
+  "size": 275289,
+  "sha": "448267d0e5c7401c5bbc5e9956ab11b99793a11b0ede988afd983bcfffeca17d",
+  "notes": "Mero Sampatti. First release.",
+  "key": "old"
+ }
+]
