@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.2.0",
+    "name": "Tablet layout",
+    "date": "2026-11-10",
+    "size": 242521,
+    "notes": "New tablet layout: on screens 600 px wide or more the menu moves to the left side and the cards use the wider space. Phone layout is unchanged. Signed with the same key as 2.1.1, so it installs over 2.1.1 and keeps your data.",
+    "minAndroid": "Android 6.0 (API 23)",
+    "url": "downloads/ARTHAVAULT-v2.2.0.apk",
+    "sha256": "7a2af898cefc387c1f2136a15de4a8bda2079796f407526c8bef773fa780182f",
+    "signingKey": "new",
+    "status": "Latest"
+  },
+  {
     "version": "2.1.1",
     "name": "New signing key",
     "date": "2026-11-07",
@@ -9,7 +21,7 @@
     "url": "downloads/ARTHAVAULT-v2.1.1.apk",
     "sha256": "4afe1f22962ac98dbba566036e3e2e4d267c3fd478bc54136845ec2f2f6e54eb",
     "signingKey": "new",
-    "status": "Latest"
+    "status": "Previous"
   },
   {
     "version": "2.1.0",
