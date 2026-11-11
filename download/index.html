@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ARTHAVAULT Download Center - Android APK Versions</title>
-<meta name="description" content="Download ARTHAVAULT for Android. Latest version and all previous APK versions with release notes, file size and SHA-256.">
+<meta name="description" content="Download ARTHAVAULT for Android. Recommended version and all other APK versions with release notes, file size and SHA-256.">
 <link rel="canonical" href="https://arthavault.github.io/download/">
 <meta property="og:site_name" content="ARTHAVAULT"><meta name="application-name" content="ARTHAVAULT"><meta name="robots" content="index,follow"><meta name="theme-color" content="#070d1f">
 <meta property="og:type" content="website"><meta property="og:title" content="ARTHAVAULT Download Center"><meta property="og:description" content="All ARTHAVAULT Android APK versions."><meta property="og:url" content="https://arthavault.github.io/download/"><meta property="og:image" content="https://arthavault.github.io/assets/logo.webp">
@@ -9,12 +9,12 @@
 <a class="l" href="../">Back to Home</a><a class="l cta" href="#all-versions">All Versions</a></div></nav>
 <div class="w">
 <div class="hero" style="padding-bottom:10px"><img class="lg" src="../assets/logo.webp" alt="ARTHAVAULT logo" width="116" height="116"><h1 style="font-size:clamp(26px,6.5vw,40px)">ARTHAVAULT <i>Download Center</i></h1>
-<p class="lead">ARTHAVAULT is a private personal finance app for Android. Pick the latest version, or any earlier release below.</p>
+<p class="lead">ARTHAVAULT is a private personal finance app for Android. Pick the recommended version, or any other release below.</p>
 <a class="btn sec back" href="../">&larr; Back to Homepage</a></div>
 
-<div class="note" style="margin:14px 0 8px"><b>Please read before installing.</b> This app is distributed as an APK outside Google Play. Google Play Protect may show "Harmful app blocked" for some versions. The developer has filed an appeal with Google. Versions 1.0 to 2.1.0 are signed with an older key and were blocked on at least one phone; on the developer's phone version 2.1.1 showed no warning (2.2.0 uses the same key as 2.1.1, but it was not tested separately), which does not prove it will show none on yours. VirusTotal scans of v2.1.1 showed no detections from the engines that could process the file. That is not a guarantee of safety. Only install if you trust the developer, and compare the SHA-256 after downloading.</div>
+<div class="note" style="margin:14px 0 8px"><b>Please read before installing.</b> This app is distributed as an APK outside Google Play. Google Play Protect may show "Harmful app blocked" for some versions. The developer has filed an appeal with Google. Versions 1.0 to 2.1.0 are signed with an older key and were blocked on at least one phone; on the developer's phone version 2.1.1 showed no warning (version 2.2.0, signed with the same key, was blocked on the developer's phone, so 2.1.1 is the recommended version for now), which does not prove it will show none on yours. VirusTotal scans of v2.1.1 showed no detections from the engines that could process the file. That is not a guarantee of safety. Only install if you trust the developer, and compare the SHA-256 after downloading.</div>
 
-<section id="latest" style="padding:26px 0 0"><h2 class="h2">Latest version</h2><div id="latest-box"><p class="sub">Loading versions...</p></div></section>
+<section id="latest" style="padding:26px 0 0"><h2 class="h2">Recommended version</h2><div id="latest-box"><p class="sub">Loading versions...</p></div></section>
 <section id="all-versions" style="padding:26px 0 0"><h2 class="h2">Previous versions</h2><p class="sub">Older releases. Newer is recommended unless you need a specific version.</p><div id="prev-box"></div></section>
 
 <section style="padding:30px 0"><h2 class="h2">How to install</h2><ol class="steps">
@@ -26,14 +26,14 @@
 <script>
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function fsz(n){return n>=1048576?(n/1048576).toFixed(2)+' MB':(n/1024).toFixed(0)+' KB'}
-function card(v,i){var latest=v.status==='Latest';
+function card(v,i){var latest=v.status==='Recommended';
 return '<article class="card vcard'+(latest?' latest':'')+'" id="v'+esc(v.version)+'"><div class="vh"><div><h3>Version '+esc(v.version)+'<span class="badge'+(latest?' l':'')+'">'+esc(v.status)+'</span></h3><div class="nm">'+esc(v.name)+'</div></div>'+
 '<button class="btn'+(latest?'':' sec')+' sm" data-i="'+i+'">Download APK</button></div>'+
 '<div class="meta"><div><span>Build date</span><b>'+esc(v.date)+'</b></div><div><span>File size</span><b>'+fsz(v.size)+'</b></div><div><span>Minimum Android</span><b>'+esc(v.minAndroid)+'</b></div><div><span>Signing key</span><b>'+(v.signingKey==='new'?'ARTHAVAULT (new)':'Mero Sampatti (older)')+'</b></div></div>'+
 '<p class="notes"><b>What\'s new:</b> '+esc(v.notes)+'</p><div class="hash">SHA-256: '+esc(v.sha256)+'</div><div class="stat" role="status" aria-live="polite"></div></article>'}
 var V=[];
 fetch('../versions.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){V=d;
-var L=d.filter(function(x){return x.status==='Latest'}),P=d.filter(function(x){return x.status!=='Latest'});
+var L=d.filter(function(x){return x.status==='Recommended'}),P=d.filter(function(x){return x.status!=='Recommended'});
 document.getElementById('latest-box').innerHTML=L.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No release is published yet.</p>';
 document.getElementById('prev-box').innerHTML=P.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No previous versions.</p>';
 }).catch(function(){document.getElementById('latest-box').innerHTML='<p class="note">The version list could not be loaded. Please check your connection and reload this page.</p>'});
