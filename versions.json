@@ -10,5 +10,17 @@
     "sha256": "f985cd751ce86020b2b87089990030c57d4190207cdefa087692735ce9699d97",
     "signingKey": "new",
     "status": "Recommended"
+  },
+  {
+    "version": "2.1.1",
+    "name": "Earlier version (no Play Protect warning on the developer's phone)",
+    "date": "2026-11-07",
+    "size": 238425,
+    "notes": "Same core features as 2.1.0 (accounts, income, expenses, transfers, investments, calculator), without the newer search, profile picture and helper. On the developer's phone and on one other phone, Google Play Protect showed no warning for this version, while later builds were blocked. That does not guarantee the same on your phone. It uses an older signing key, so it cannot be installed over 2.4.x and 2.4.x cannot be installed over it: make a backup, uninstall one, install the other, then restore. It will not receive updates.",
+    "minAndroid": "Android 6.0 (API 23)",
+    "url": "downloads/ARTHAVAULT-v2.1.1.apk",
+    "sha256": "4afe1f22962ac98dbba566036e3e2e4d267c3fd478bc54136845ec2f2f6e54eb",
+    "signingKey": "old",
+    "status": "Previous"
   }
 ]

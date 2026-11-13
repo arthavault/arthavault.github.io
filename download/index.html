@@ -9,18 +9,19 @@
 <a class="l" href="../">Back to Home</a><a class="l cta" href="#latest">Download</a></div></nav>
 <div class="w">
 <div class="hero" style="padding-bottom:10px"><img class="lg" src="../assets/logo.webp" alt="ARTHAVAULT logo" width="116" height="116"><h1 style="font-size:clamp(26px,6.5vw,40px)">ARTHAVAULT <i>Download Center</i></h1>
-<p class="lead">ARTHAVAULT is a private personal finance app for Android. Download the current version below.</p>
+<p class="lead">ARTHAVAULT is a private personal finance app for Android. Download the current version, or an earlier version below.</p>
 <a class="btn sec back" href="../">&larr; Back to Homepage</a></div>
 
 <div class="note" style="margin:14px 0 8px"><b>Please read before installing.</b> This app is distributed as an APK outside Google Play. Google Play Protect may show a "Harmful app blocked" warning, and earlier versions did on the developer's phone. The reason is not known, the developer has filed an appeal with Google, and this version has not yet been confirmed to pass on any phone. The app has no internet permission and keeps your records only on your phone. Only install if you trust the developer, and compare the SHA-256 shown below with the file you downloaded.</div>
 
 <section id="latest" style="padding:26px 0 0"><h2 class="h2">Current version</h2><div id="latest-box"><p class="sub">Loading versions...</p></div></section>
+<section id="all-versions" style="padding:26px 0 0"><h2 class="h2">Earlier version</h2><p class="sub">If the current version is blocked by Google Play Protect on your phone, you can try this earlier one. Read its notes first.</p><div id="prev-box"></div></section>
 
 
 <section style="padding:30px 0"><h2 class="h2">How to install</h2><ol class="steps">
 <li>Download the APK on your Android phone.</li><li>Open it. If asked, allow your browser or Files app to install apps.</li>
 <li>If Play Protect warns you, read the notice above and decide for yourself.</li>
-<li><b>Moving from an older version:</b> this version cannot be installed over 2.3.0 or any earlier version. Make a Backup in Settings first, uninstall the old app, install this version, then Restore. The backup does not contain your PIN or security questions, so set those again. Future updates signed with the same key install directly over this one.</li></ol></section>
+<li><b>Moving from an older version:</b> the current version cannot be installed over 2.3.0 or any earlier version, including 2.1.1. Make a Backup in Settings first, uninstall the old app, install this version, then Restore. The backup does not contain your PIN or security questions, so set those again. Future updates signed with the same key install directly over this one.</li></ol></section>
 </div>
 <footer><div class="w"><a href="../">Back to Home</a> · ARTHAVAULT · Sachin Paudel, Pokhara, Nepal<br>ARTHAVAULT is an independent app and is not affiliated with Google.</div></footer>
 <script>
@@ -35,6 +36,7 @@ var V=[];
 fetch('../versions.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){V=d;
 var L=d.filter(function(x){return x.status==='Recommended'}),P=d.filter(function(x){return x.status!=='Recommended'});
 document.getElementById('latest-box').innerHTML=L.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No release is published yet.</p>';
+document.getElementById('prev-box').innerHTML=P.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No earlier version.</p>';
 }).catch(function(){document.getElementById('latest-box').innerHTML='<p class="note">The version list could not be loaded. Please check your connection and reload this page.</p>'});
 document.addEventListener('click',function(e){var b=e.target.closest('button[data-i]');if(!b)return;var v=V[+b.dataset.i];if(!v)return;
 var st=b.closest('.vcard').querySelector('.stat');b.disabled=true;st.className='stat wait';st.textContent='Checking that the file is available...';
