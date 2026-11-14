@@ -1,26 +1,14 @@
 [
   {
-    "version": "2.4.2",
-    "name": "Profile picture, search and helper",
+    "version": "2.4.5",
+    "name": "Investment sell and edit, email feedback",
     "date": "2026-11-14",
-    "size": 648025,
-    "notes": "Light theme by default. Add your own profile picture on the home screen. New Search button that finds any feature or setting. The Helper (assistant) now answers in English, Roman Nepali or Nepali and shows step-by-step guides with pictures. Declining the Terms closes the app. Stricter WebView settings. App tour and start animation removed. Signed with the same key as 2.4.0 and 2.4.1. It cannot be installed over any older version (2.3.0 and earlier): save a backup file first, uninstall the old app, install this one, then restore.",
+    "size": 697177,
+    "notes": "Sell shares and see profit or loss (average cost method), edit or delete share purchases and sales, edit company names. Bug and feedback reports now open your email app with a required subject. Updated contact links. The helper knows about all of this. Signed with the same key as 2.4.0 to 2.4.4, so it installs over those. It cannot be installed over 2.3.0 or earlier: save a backup file first, uninstall the old app, install this one, then restore.",
     "minAndroid": "Android 6.0 (API 23)",
-    "url": "downloads/ARTHAVAULT-v2.4.2.apk",
-    "sha256": "f985cd751ce86020b2b87089990030c57d4190207cdefa087692735ce9699d97",
+    "url": "downloads/ARTHAVAULT-v2.4.5.apk",
+    "sha256": "13eca0331ea987644167e2c7edf52de01595a9cfc563cfbccfaeb64ecb87544d",
     "signingKey": "new",
     "status": "Recommended"
-  },
-  {
-    "version": "2.1.1",
-    "name": "Earlier version (no Play Protect warning on the developer's phone)",
-    "date": "2026-11-07",
-    "size": 238425,
-    "notes": "Same core features as 2.1.0 (accounts, income, expenses, transfers, investments, calculator), without the newer search, profile picture and helper. On the developer's phone and on one other phone, Google Play Protect showed no warning for this version, while later builds were blocked. That does not guarantee the same on your phone. It uses an older signing key, so it cannot be installed over 2.4.x and 2.4.x cannot be installed over it: make a backup, uninstall one, install the other, then restore. It will not receive updates.",
-    "minAndroid": "Android 6.0 (API 23)",
-    "url": "downloads/ARTHAVAULT-v2.1.1.apk",
-    "sha256": "4afe1f22962ac98dbba566036e3e2e4d267c3fd478bc54136845ec2f2f6e54eb",
-    "signingKey": "old",
-    "status": "Previous"
   }
 ]

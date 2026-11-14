@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARTHAVAULT Download Center - Android APK Versions</title>
+<meta name="description" content="Download ARTHAVAULT for Android. Current APK with release notes, file size and SHA-256.">
+<link rel="canonical" href="https://arthavault.github.io/download.html">
+<meta property="og:site_name" content="ARTHAVAULT"><meta name="application-name" content="ARTHAVAULT"><meta name="robots" content="index,follow"><meta name="theme-color" content="#070d1f">
+<meta property="og:type" content="website"><meta property="og:title" content="ARTHAVAULT Download Center"><meta property="og:description" content="All ARTHAVAULT Android APK versions."><meta property="og:url" content="https://arthavault.github.io/download.html"><meta property="og:image" content="https://arthavault.github.io/assets/logo.webp">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="stylesheet" href="assets/style.css"></head><body>
+<nav class="top"><div class="w"><a class="brand" href="./"><img src="assets/logo.webp" alt=""><span>ARTHA<i>VAULT</i></span></a>
+<a class="l" href="./">Back to Home</a><a class="l cta" href="#latest">Download</a></div></nav>
+<div class="w">
+<div class="hero" style="padding-bottom:10px"><img class="lg" src="assets/logo.webp" alt="ARTHAVAULT logo" width="116" height="116"><h1 style="font-size:clamp(26px,6.5vw,40px)">ARTHAVAULT <i>Download Center</i></h1>
+<p class="lead">ARTHAVAULT is a private personal finance app for Android. Download the current version below.</p>
+<a class="btn sec back" href="./">&larr; Back to Homepage</a></div>
+
+<div class="note" style="margin:14px 0 8px"><b>Please read before installing.</b> This app is distributed as an APK outside Google Play. Google Play Protect may show a "Harmful app blocked" warning, and earlier versions did on the developer's phone. The reason is not known, the developer has filed an appeal with Google, and this version has not yet been confirmed to pass on any phone. The app has no internet permission and keeps your records only on your phone. Only install if you trust the developer, and compare the SHA-256 shown below with the file you downloaded.</div>
+
+<section id="latest" style="padding:26px 0 0"><h2 class="h2">Current version</h2><div id="latest-box"><p class="sub">Loading versions...</p></div></section>
+
+
+
+<section style="padding:30px 0"><h2 class="h2">How to install</h2><ol class="steps">
+<li>Download the APK on your Android phone.</li><li>Open it. If asked, allow your browser or Files app to install apps.</li>
+<li>If Play Protect warns you, read the notice above and decide for yourself.</li>
+<li><b>Moving from an older version:</b> the current version cannot be installed over 2.3.0 or any earlier version. Make a Backup in Settings first, uninstall the old app, install this version, then Restore. The backup does not contain your PIN or security questions, so set those again. Versions 2.4.0 and later install directly over each other.</li></ol></section>
+</div>
+<footer><div class="w"><a href="./">Back to Home</a> · ARTHAVAULT · Sachin Paudel, Pokhara, Nepal<br>ARTHAVAULT is an independent app and is not affiliated with Google.</div></footer>
+<script>
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fsz(n){return n>=1048576?(n/1048576).toFixed(2)+' MB':(n/1024).toFixed(0)+' KB'}
+function card(v,i){var latest=v.status==='Recommended';
+return '<article class="card vcard'+(latest?' latest':'')+'" id="v'+esc(v.version)+'"><div class="vh"><div><h3>Version '+esc(v.version)+'<span class="badge'+(latest?' l':'')+'">'+esc(v.status)+'</span></h3><div class="nm">'+esc(v.name)+'</div></div>'+
+'<button class="btn'+(latest?'':' sec')+' sm" data-i="'+i+'">Download APK</button></div>'+
+'<div class="meta"><div><span>Build date</span><b>'+esc(v.date)+'</b></div><div><span>File size</span><b>'+fsz(v.size)+'</b></div><div><span>Minimum Android</span><b>'+esc(v.minAndroid)+'</b></div><div><span>Signing key</span><b>'+(v.signingKey==='new'?'ARTHAVAULT (new)':'Mero Sampatti (older)')+'</b></div></div>'+
+'<p class="notes"><b>What\'s new:</b> '+esc(v.notes)+'</p><div class="hash">SHA-256: '+esc(v.sha256)+'</div><div class="stat" role="status" aria-live="polite"></div></article>'}
+var V=[];
+fetch('versions.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){V=d;
+var L=d.filter(function(x){return x.status==='Recommended'}),P=d.filter(function(x){return x.status!=='Recommended'});
+document.getElementById('latest-box').innerHTML=L.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No release is published yet.</p>';
+
+}).catch(function(){document.getElementById('latest-box').innerHTML='<p class="note">The version list could not be loaded. Please check your connection and reload this page.</p>'});
+document.addEventListener('click',function(e){var b=e.target.closest('button[data-i]');if(!b)return;var v=V[+b.dataset.i];if(!v)return;
+var st=b.closest('.vcard').querySelector('.stat');b.disabled=true;st.className='stat wait';st.textContent='Checking that the file is available...';
+fetch(v.url,{method:'HEAD',cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;
+var a=document.createElement('a');a.href=v.url;a.download=v.url.split('/').pop();document.body.appendChild(a);a.click();a.remove();
+st.className='stat ok';st.textContent='Download requested for '+a.download+' ('+fsz(v.size)+'). Check your browser downloads to confirm it finished.'}).catch(function(){
+st.className='stat err';st.textContent='This download is currently unavailable. Please try again later or choose another version.'}).then(function(){b.disabled=false})});
+</script></body></html>
