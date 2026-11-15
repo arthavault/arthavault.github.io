@@ -18,6 +18,7 @@
 
 
 
+<section id="older" style="padding:26px 0 0;display:none"><h2 class="h2">Old versions</h2><div id="old-box"></div></section>
 <section style="padding:30px 0"><h2 class="h2">How to install</h2>
 <ol class="steps">
 <li><b>Download</b> the APK on your Android phone with the button above. If asked, allow your browser or Files app to install apps.</li>
@@ -50,7 +51,7 @@ var V=[];
 fetch('versions.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){V=d;
 var L=d.filter(function(x){return x.status==='Latest'}),P=d.filter(function(x){return x.status!=='Latest'});
 document.getElementById('latest-box').innerHTML=L.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No release is published yet.</p>';
-
+if(P.length){document.getElementById('old-box').innerHTML=P.map(function(x){return card(x,d.indexOf(x))}).join('');document.getElementById('older').style.display='block'}
 }).catch(function(){document.getElementById('latest-box').innerHTML='<p class="note">The version list could not be loaded. Please check your connection and reload this page.</p>'});
 document.addEventListener('click',function(e){var b=e.target.closest('button[data-i]');if(!b)return;var v=V[+b.dataset.i];if(!v)return;
 var st=b.closest('.vcard').querySelector('.stat');b.disabled=true;st.className='stat wait';st.textContent='Checking that the file is available...';
