@@ -41,14 +41,14 @@
 <script>
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function fsz(n){return n>=1048576?(n/1048576).toFixed(2)+' MB':(n/1024).toFixed(0)+' KB'}
-function card(v,i){var latest=v.status==='Recommended';
+function card(v,i){var latest=v.status==='Latest';
 return '<article class="card vcard'+(latest?' latest':'')+'" id="v'+esc(v.version)+'"><div class="vh"><div><h3>Version '+esc(v.version)+'<span class="badge'+(latest?' l':'')+'">'+esc(v.status)+'</span></h3><div class="nm">'+esc(v.name)+'</div></div>'+
 '<button class="btn'+(latest?'':' sec')+' sm" data-i="'+i+'">Download APK</button></div>'+
 '<div class="meta"><div><span>Build date</span><b>'+esc(v.date)+'</b></div><div><span>File size</span><b>'+fsz(v.size)+'</b></div><div><span>Minimum Android</span><b>'+esc(v.minAndroid)+'</b></div><div><span>Signing key</span><b>'+(v.signingKey==='new'?'ARTHAVAULT (new)':'Mero Sampatti (older)')+'</b></div></div>'+
 '<p class="notes"><b>What\'s new:</b> '+esc(v.notes)+'</p><div class="hash">SHA-256: '+esc(v.sha256)+'</div><div class="stat" role="status" aria-live="polite"></div></article>'}
 var V=[];
 fetch('versions.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){V=d;
-var L=d.filter(function(x){return x.status==='Recommended'}),P=d.filter(function(x){return x.status!=='Recommended'});
+var L=d.filter(function(x){return x.status==='Latest'}),P=d.filter(function(x){return x.status!=='Latest'});
 document.getElementById('latest-box').innerHTML=L.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No release is published yet.</p>';
 
 }).catch(function(){document.getElementById('latest-box').innerHTML='<p class="note">The version list could not be loaded. Please check your connection and reload this page.</p>'});

@@ -1,14 +1,26 @@
 [
   {
+    "version": "2.4.7",
+    "name": "Nepali calendar (BS), no future dates, input limits",
+    "date": "2026-11-15",
+    "size": 701273,
+    "notes": "All dates now use the Nepali calendar (Bikram Sambat) instead of AD. Transactions and share purchases or sales cannot be dated after today. Names are limited to 30 characters and transaction notes to 100. Includes investment sell and edit, email feedback and the helper updates. Signed with the same key as 2.4.0 and later, so it installs over those. It cannot be installed over 2.3.0 or earlier: save a backup file first, uninstall the old app, install this one, then restore.",
+    "minAndroid": "Android 6.0 (API 23)",
+    "url": "downloads/ARTHAVAULT-v2.4.7.apk",
+    "sha256": "8d899f6f2fe17a77b74cd8e1a5bf4b0d3a1c08476cc01ee981b34b04428881f1",
+    "signingKey": "new",
+    "status": "Latest"
+  },
+  {
     "version": "2.4.5",
     "name": "Investment sell and edit, email feedback",
     "date": "2026-11-14",
     "size": 697177,
-    "notes": "Sell shares and see profit or loss (average cost method), edit or delete share purchases and sales, edit company names. Bug and feedback reports now open your email app with a required subject. Updated contact links. The helper knows about all of this. Signed with the same key as 2.4.0 to 2.4.4, so it installs over those. It cannot be installed over 2.3.0 or earlier: save a backup file first, uninstall the old app, install this one, then restore.",
+    "notes": "Sell shares and see profit or loss, edit or delete share purchases and sales, edit company names. Bug and feedback reports open your email app. Uses AD dates (no Nepali calendar). Signed with the same key as 2.4.0 and later.",
     "minAndroid": "Android 6.0 (API 23)",
     "url": "downloads/ARTHAVAULT-v2.4.5.apk",
     "sha256": "13eca0331ea987644167e2c7edf52de01595a9cfc563cfbccfaeb64ecb87544d",
     "signingKey": "new",
-    "status": "Recommended"
+    "status": "Old version"
   }
 ]
