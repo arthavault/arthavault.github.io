@@ -25,10 +25,16 @@
 <div class="card"><b class="t">Backup and restore</b><p>Save a backup file, optionally password protected, and restore it any time.</p></div></div>
 
 <div class="rv" style="padding:38px 0 8px"><h2 class="h2">App interface preview</h2><p class="sub">Screens from the app, shown with sample data.</p></div>
-<div class="shots rv">
-<figure><img src="assets/shot-home.webp" alt="ARTHAVAULT home screen with total balance" width="234" height="468" loading="lazy"><figcaption>Home</figcaption></figure>
-<figure><img src="assets/shot-accounts.webp" alt="ARTHAVAULT accounts list" width="234" height="468" loading="lazy"><figcaption>Accounts</figcaption></figure>
-<figure><img src="assets/shot-calc.webp" alt="ARTHAVAULT built-in calculator" width="234" height="468" loading="lazy"><figcaption>Calculator</figcaption></figure></div>
+<div class="demo rv" id="demo" aria-label="ARTHAVAULT app preview">
+<div class="phone"><div class="screen">
+<img class="on" src="assets/demo-home.webp" alt="Home screen with total balance, income and expenses" width="360" height="740" loading="lazy">
+<img src="assets/demo-add.webp" alt="New transaction with Nepali (BS) date selector" width="360" height="740" loading="lazy">
+<img src="assets/demo-cal.webp" alt="Nepali calendar view for Mangsir 2083" width="360" height="740" loading="lazy">
+</div></div>
+<div class="dcap"><b id="dtitle">Home</b><span id="dtext">Your total balance, income and expenses at a glance.</span>
+<div class="dots" role="tablist"><button type="button" class="d on" data-i="0" aria-label="Home"></button><button type="button" class="d" data-i="1" aria-label="Add transaction"></button><button type="button" class="d" data-i="2" aria-label="Nepali calendar"></button></div></div>
+</div>
+<p class="sub" style="text-align:center;margin-top:6px">Sample data shown.</p>
 
 <div class="rv" style="padding:22px 0 46px"><h2 class="h2">Benefits</h2><p class="sub">What you get when you use ARTHAVAULT.</p>
 <ul class="ben"><li>Private: the app has no internet permission, so it cannot send your records anywhere.</li><li>Works offline, anywhere.</li><li>No account or sign-up needed.</li><li>No ads and no third-party tracking libraries.</li><li>Lock with PIN or fingerprint.</li><li>Back up your data to a file and restore it when needed.</li></ul>
@@ -53,4 +59,9 @@
 <script>
 (function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
 var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){o.observe(e)})})();
-</script></body></html>
+</script><script>(function(){var d=document.getElementById('demo');if(!d)return;var im=d.querySelectorAll('.screen img'),dt=d.querySelectorAll('.d'),T=[['Home','Your total balance, income and expenses at a glance.'],['Add a transaction','Pick the date from the Nepali (BS) calendar. Future dates are not accepted.'],['Nepali calendar','See your payments and income on the Bikram Sambat calendar.']],i=0,t;
+function go(n){i=n;for(var k=0;k<im.length;k++){im[k].classList.toggle('on',k===n);dt[k].classList.toggle('on',k===n)}document.getElementById('dtitle').textContent=T[n][0];document.getElementById('dtext').textContent=T[n][1]}
+function play(){if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;clearInterval(t);t=setInterval(function(){go((i+1)%im.length)},3500)}
+dt.forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.i);play()})});
+d.addEventListener('mouseenter',function(){clearInterval(t)});d.addEventListener('mouseleave',play);play()})();</script>
+</body></html>

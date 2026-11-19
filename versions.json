@@ -1,13 +1,13 @@
 [
   {
-    "version": "2.4.7",
+    "version": "2.4.8",
     "name": "Nepali calendar (BS), no future dates, input limits",
-    "date": "2026-11-15",
-    "size": 701273,
-    "notes": "All dates now use the Nepali calendar (Bikram Sambat) instead of AD. Transactions and share purchases or sales cannot be dated after today. Names are limited to 30 characters and transaction notes to 100. Includes investment sell and edit, email feedback and the helper updates. Signed with the same key as 2.4.0 and later, so it installs over those. It cannot be installed over 2.3.0 or earlier: save a backup file first, uninstall the old app, install this one, then restore.",
+    "date": "2026-11-19",
+    "size": 713561,
+    "notes": "All dates use the Nepali calendar (Bikram Sambat). Transactions and share purchases or sales cannot be dated after today. Names are limited to 30 characters and notes to 100. Includes investment sell and edit, email feedback and the helper updates. Signed with the same key as 2.4.0 and later, so it installs over those. It cannot be installed over 2.3.0 or earlier: save a backup file first, uninstall the old app, install this one, then restore.",
     "minAndroid": "Android 6.0 (API 23)",
-    "url": "downloads/ARTHAVAULT-v2.4.7.apk",
-    "sha256": "8d899f6f2fe17a77b74cd8e1a5bf4b0d3a1c08476cc01ee981b34b04428881f1",
+    "url": "downloads/ARTHAVAULT-v2.4.8.apk",
+    "sha256": "062a154275381646b37435ee632fa357eada4b0ded0538cb36ab94d42bc78245",
     "signingKey": "new",
     "status": "Latest"
   },
