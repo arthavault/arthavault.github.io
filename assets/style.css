@@ -70,3 +70,8 @@ ol.steps{padding-left:20px;color:var(--mut)}ol.steps li{margin:6px 0}
 .dcap{text-align:center;max-width:320px}.dcap b{display:block;font-size:16px;margin-bottom:4px}.dcap span{display:block;font-size:14px;color:var(--mut);min-height:40px}
 .dots{display:flex;gap:10px;justify-content:center;margin-top:10px}.dots .d{width:12px;height:12px;border-radius:50%;border:0;background:var(--line);padding:0;cursor:pointer}.dots .d.on{background:#e0b64c;width:28px;border-radius:8px}
 @media(prefers-reduced-motion:reduce){.screen img{transition:none}}
+
+.pol{padding:22px}.pol h2{font-size:20px;margin:22px 0 6px}.pol h2:first-child{margin-top:0}.pol p,.pol li{color:var(--ink);line-height:1.6}.pol ul{padding-left:20px;margin:6px 0}.pol .tag2{margin-top:26px;text-align:center;color:var(--gold)}
+.rvl{display:grid;gap:12px;margin:14px 0}.rvc p{margin:6px 0 8px;line-height:1.55}.rvs{color:var(--gold);font-size:20px;letter-spacing:2px}
+.rvform label{display:block;font-weight:600;margin:12px 0 6px}.rvform input,.rvform select,.rvform textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px}
+.pol p{margin:0 0 10px}
