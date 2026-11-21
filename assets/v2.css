@@ -122,3 +122,6 @@ body{overflow-x:hidden}
 }
 @media(max-width:480px){.fgrid{grid-template-columns:1fr}.lead2{font-size:16px}.btn.big{width:100%;justify-content:center}.lb figure{max-width:62vw}.lbn{width:40px;height:40px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+/* fix: style.css fixes nav height at 60px, which let the open mobile menu spill over the page */
+nav.v2n .w.w2{height:auto;min-height:60px}
+@media(max-width:820px){nav.v2n{background:var(--bg)}nav.v2n .w.w2{padding-top:6px;padding-bottom:6px}.menu{background:var(--bg)!important;margin-top:6px}}
