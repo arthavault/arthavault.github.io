@@ -47,8 +47,6 @@ fetch(C.versionsUrl||'versions.json',{cache:'no-cache'}).then(function(r){if(!r.
 var list=j.versions||j.releases||(Array.isArray(j)?j:[]);var L=null;
 for(var i=0;i<list.length;i++){var s=(list[i].status||'').toLowerCase();if(s==='latest'||s==='recommended'){L=list[i];break}}
 if(!L&&list.length)L=list[0];if(!L)return;
-var url=C.apkUrlOverride||L.url||L.file||L.apk;
-if(url)D.querySelectorAll('.js-dl').forEach(function(a){if(a.closest('.v2n')||a.closest('.f2'))return;a.href=url;a.setAttribute('download','')});
 var bits=[T('vl','Latest version')+': '+(L.version||L.name||'')];
 if(L.size)bits.push(typeof L.size==='number'?mb(L.size):L.size);else if(L.bytes)bits.push(mb(L.bytes));
 if(L.sha256)bits.push('SHA-256: '+L.sha256);
