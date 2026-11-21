@@ -1,5 +1,17 @@
 [
   {
+    "version": "2.4.9",
+    "name": "Standard Gradle build of 2.4.8",
+    "date": "2026-11-21",
+    "size": 1649495,
+    "notes": "Same features as 2.4.8, now compiled with the standard Android build tools (Gradle) instead of a repackaged build. Signed with the same key as 2.4.0 and later, so it installs over those. It cannot be installed over 2.3.0 or earlier: save a backup file first, uninstall the old app, install this one, then restore. Google Play Protect may ask you to scan the app; tap Scan app.",
+    "minAndroid": "Android 6.0 (API 23)",
+    "url": "downloads/ARTHAVAULT-v2.4.9.apk",
+    "sha256": "44d24e860fc40a3846e8f38bff1b309379cdc666d4d3c3995ee623454a1beccf",
+    "signingKey": "new",
+    "status": "Latest"
+  },
+  {
     "version": "2.4.8",
     "name": "Nepali calendar (BS), no future dates, input limits",
     "date": "2026-11-19",
@@ -9,7 +21,7 @@
     "url": "downloads/ARTHAVAULT-v2.4.8.apk",
     "sha256": "062a154275381646b37435ee632fa357eada4b0ded0538cb36ab94d42bc78245",
     "signingKey": "new",
-    "status": "Latest"
+    "status": "Old version"
   },
   {
     "version": "2.4.5",
