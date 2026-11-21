@@ -51,7 +51,6 @@ var V=[];
 fetch('versions.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){V=d;
 var L=d.filter(function(x){return x.status==='Latest'}),P=d.filter(function(x){return x.status!=='Latest'});
 document.getElementById('latest-box').innerHTML=L.map(function(x){return card(x,d.indexOf(x))}).join('')||'<p class="sub">No release is published yet.</p>';
-if(P.length){document.getElementById('old-box').innerHTML=P.map(function(x){return card(x,d.indexOf(x))}).join('');document.getElementById('older').style.display='block'}
 }).catch(function(){document.getElementById('latest-box').innerHTML='<p class="note">The version list could not be loaded. Please check your connection and reload this page.</p>'});
 document.addEventListener('click',function(e){var b=e.target.closest('button[data-i]');if(!b)return;var v=V[+b.dataset.i];if(!v)return;
 var st=b.closest('.vcard').querySelector('.stat');b.disabled=true;st.className='stat wait';st.textContent='Checking that the file is available...';
